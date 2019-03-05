@@ -7,7 +7,7 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>XP_Market | نمایش تصویر</title>
+    <title>XP_Market | نمایش بذر</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -182,13 +182,13 @@
                   </li>
 
                   <li class="sub-menu">
-                      <a class="active" href="javascript:;" >
-                          <i class="fa fa-desktop"></i>
-                          <span>تصاویر</span>
+                      <a href="javascript:;" class="active" >
+                          <i class="fa fa-dot-circle-o"></i>
+                          <span>بذر</span>
                       </a>
                       <ul class="sub">
-                          <li class="active"><a  href="/show">نمایش تصاویر</a></li>
-                          <li><a  href="/add">اضافه کردن تصاویر</a></li>
+                          <li class="active"><a  href="/show_seed">نمایش بذر</a></li>
+                          <li><a  href="/add_seed">اضافه کردن بذر جدید</a></li>
                       </ul>
                   </li>
 
@@ -207,24 +207,30 @@
 
                   <div class="col-md-12" style="margin-top: 20px;">
                       <div class="content-panel">
-                          <h4></i>نمایش کاربران</h4><hr><table class="table table-striped table-advance table-hover">
+                          <h4></i>نمایش بذر ها</h4><hr><table class="table table-striped table-advance table-hover">
                               <thead>
 
                               <tr>
-                                  <th>نام کاربر</th>
+                                  <th>نام بذر</th>
+                                  <th>نام انگلیسی</th>
+                                  <th>تعداد</th>
+                                  <th>دسته بندی</th>
                                   <th>تنظیمات</th>
                               </tr>
                               </thead>
                               <tbody>
-                                      @foreach($query as $values)
-                                      <form method="post" action="../{{$values->id}}" id="frm"   onSubmit="return dl()">
+                                      @foreach($seed as $seeds)
+                                      <form method="post" action="../{{$seeds->id}}" id="frm"   onSubmit="return dl()">
                                       {{method_field("delete")}}
                                       {{csrf_field()}}
                                       <tr style="font-family:roya;">
-                                      <td><a href="/show_user_picture/{{$values->id}}">{{$values->name}}</a></td>
+                                          <td>{{$seeds->name}}</td>
+                                          <td>{{$seeds->name_en}}</td>
+                                          <td>{{$seeds->number}}</td>
+                                          <td>{{$seeds->seed_category}}</td>
                                       <td>
-                                      <a href="/add_user_pic/{{$values->id}}" class="btn btn-primary btn-xs"><i class="fa fa-image"></i></a>
-                                      <a href="/edit/{{$values->id}}" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></a>
+                                      <a href="/add_user_pic/{{$seeds->id}}" class="btn btn-primary btn-xs"><i class="fa fa-image"></i></a>
+                                      <a href="/edit_seed/{{$seeds->id}}" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></a>
                                       <button type="submit" name="delete" class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
                                       </td>
                                       </tr>

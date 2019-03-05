@@ -170,7 +170,7 @@
 
                   <li class="sub-menu">
                       <a href="javascript:;" >
-                          <i class="fa fa-shopping-cart"></i>
+                          <i class="fa fa-dot-circle-o"></i>
                           <span>بذر</span>
                       </a>
                       <ul class="sub">
