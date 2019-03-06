@@ -18,6 +18,7 @@ class CreateSeedsTable extends Migration
             $table->string("name");
             $table->string("name_en");
             $table->integer("number");
+            $table->string("age");
             $table->integer("seed_category");
         });
     }

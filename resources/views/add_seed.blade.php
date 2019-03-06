@@ -238,6 +238,12 @@
                               </div>
                           </div>
                           <div class="form-group">
+                              <label class="col-sm-2 col-sm-2 control-label">سن بذر :</label>
+                              <div class="col-sm-10" style="margin-right: -100px;">
+                                  <input id="age" name="age" class="form-control round-form" type="text" placeholder="سن بذر" >
+                              </div>
+                          </div>
+                          <div class="form-group">
                               <label class="col-sm-2 col-sm-2 control-label">ارسال عکس:</label>
                               <div class="col-sm-10" style="margin-right: -100px;">
                                   <input id="picture" name="picture"  class="round-form" type="file" placeholder="ارسال فایل">

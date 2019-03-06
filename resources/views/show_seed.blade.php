@@ -215,6 +215,8 @@
                                   <th>نام انگلیسی</th>
                                   <th>تعداد</th>
                                   <th>دسته بندی</th>
+                                  <th>سن بذر</th>
+                                  <th>عکس</th>
                                   <th>تنظیمات</th>
                               </tr>
                               </thead>
@@ -228,6 +230,7 @@
                                           <td>{{$seeds->name_en}}</td>
                                           <td>{{$seeds->number}}</td>
                                           <td>{{$seeds->seed_category}}</td>
+                                          <td>{{$seeds->age}}</td>
                                           <td><a href="assets/img/Seed/{{$seeds->id}}.jpg"><img src="assets/img/Seed/{{$seeds->id}}.jpg" width="62" height="62" style="border-radius:8px;"/></a></td>
                                           <td>
                                       <a href="/add_user_pic/{{$seeds->id}}" class="btn btn-primary btn-xs"><i class="fa fa-image"></i></a>

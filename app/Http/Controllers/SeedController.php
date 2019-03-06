@@ -23,6 +23,7 @@ class SeedController extends Controller{
         $seed->name_en=$request->name_en;
         $seed->number=$request->number;
         $seed->seed_category=$request->seed_category;
+        $seed->age=$request->age;
 
         $seed->save();
 
@@ -48,6 +49,7 @@ class SeedController extends Controller{
         $seed->name_en=$request->name_en;
         $seed->number=$request->number;
         $seed->seed_category=$request->seed_category;
+        $seed->age=$request->age;
 
         $request->file('picture')->move("assets/img/Seed/",$seed->id.'.jpg');
 
