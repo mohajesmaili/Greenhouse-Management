@@ -228,7 +228,8 @@
                                           <td>{{$seeds->name_en}}</td>
                                           <td>{{$seeds->number}}</td>
                                           <td>{{$seeds->seed_category}}</td>
-                                      <td>
+                                          <td><a href="assets/img/Seed/{{$seeds->id}}.jpg"><img src="assets/img/Seed/{{$seeds->id}}.jpg" width="62" height="62" style="border-radius:8px;"/></a></td>
+                                          <td>
                                       <a href="/add_user_pic/{{$seeds->id}}" class="btn btn-primary btn-xs"><i class="fa fa-image"></i></a>
                                       <a href="/edit_seed/{{$seeds->id}}" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></a>
                                       <button type="submit" name="delete" class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
